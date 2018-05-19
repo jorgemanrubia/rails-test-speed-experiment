@@ -35,7 +35,7 @@ class DummySystemTest < ApplicationSystemTestCase
 end
 ```
 
-For system tests, I wanted to compare the difference of adding a good amount of CSS/JS to the mix. The browser has to parse that CSS and JS, and that should affect the speed for system tests. There is a flag `INCLUDE_JS_AND_CSS` that will add [Semantic UI JS and CSS](https://github.com/doabit/semantic-ui-sass) to the page . 
+For system tests, I wanted to compare the difference of adding a good amount of CSS/JS to the mix. The browser has to parse that CSS and JS, and that should affect the speed for system tests. There is a flag `INCLUDE_JS_AND_CSS` that will add JQuery (JS) and [Semantic UI (JS and CSS)](https://github.com/doabit/semantic-ui-sass) to the page . 
 
 ## Results
 

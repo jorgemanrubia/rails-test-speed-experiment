@@ -4,6 +4,8 @@ This is a simple experiment to compare the speed of running Rails integration an
 
 It uses a Rails 5.2 app that will respond to `/test/<label>` rendering `<label>` in a paragraph. It will run 100 simple integration and system tests to compare the results.
 
+I wrote this experiment while working on [this article about Rails testing](https://www.jorgemanrubia.com/2018/05/19/on-rails-testing).
+
 ## Integration test
 
 ```ruby

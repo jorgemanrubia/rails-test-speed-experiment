@@ -35,9 +35,20 @@ class DummySystemTest < ApplicationSystemTestCase
 end
 ```
 
+There is a flag `INCLUDE_JS_AND_CSS` that, when set, it will add [Semantic UI JS and CSS](https://github.com/doabit/semantic-ui-sass) to the page. This is used as a synthetic JS and CSS load for comparison purposes.
+
 ## Results
 
 | Test | Result |
+| ---- | ------ |
 | Integration | 0.49s|
 | System (without JS/CSS) | 5.9 |
 | System (with moderate JS/css) | 8.666s|
+
+## How to run the tests
+
+```bash
+rake test # Run the integation tests
+rake test:system # Run the system tests (without JS/CSS)
+rake test:system INCLUDE_JS_AND_CSS=true # Run the system tests (with moderate JS/CSS)
+```

@@ -43,12 +43,12 @@ For system tests, I wanted to compare the difference of adding a good amount of 
 | ---- | ------ |
 | Integration | 0.55s|
 | System (without JS/CSS) | 6.8s |
-| System (with moderate JS/css) | 10.12s|
+| System (with JS/CSS) | 10.12s|
 
 ## How to run the tests
 
 ```bash
 rake test # Run the integation tests
 rake test:system # Run the system tests (without JS/CSS)
-rake test:system INCLUDE_JS_AND_CSS=true # Run the system tests (with moderate JS/CSS)
+rake test:system INCLUDE_JS_AND_CSS=true # Run the system tests (with JS/CSS)
 ```

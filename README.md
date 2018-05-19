@@ -2,7 +2,7 @@
 
 This is a simple experiment to compare the speed of running Rails integration and system tests.
 
-It uses a Rails 5.2 app that will respond to `/test/<label>` rendering `<label>` in a paragraph. With that in place, it runs the following tests:
+It uses a Rails 5.2 app that will respond to `/test/<label>` rendering `<label>` in a paragraph. It will run 100 simple integration and system tests to compare the results.
 
 ## Integration test
 
@@ -35,15 +35,15 @@ class DummySystemTest < ApplicationSystemTestCase
 end
 ```
 
-There is a flag `INCLUDE_JS_AND_CSS` that, when set, it will add [Semantic UI JS and CSS](https://github.com/doabit/semantic-ui-sass) to the page. This is used as a synthetic JS and CSS load for comparison purposes.
+For system tests, I wanted to compare the difference of adding a good amount of CSS/JS to the mix. The browser has to parse that CSS and JS and I thought it would affect the results noticeably. There is a flag `INCLUDE_JS_AND_CSS` that will add [Semantic UI JS and CSS](https://github.com/doabit/semantic-ui-sass) to the page . 
 
 ## Results
 
-| Test | Result |
+| Test | Time (s) |
 | ---- | ------ |
-| Integration | 0.49s|
-| System (without JS/CSS) | 5.9 |
-| System (with moderate JS/css) | 8.666s|
+| Integration | 0.55s|
+| System (without JS/CSS) | 6.8s |
+| System (with moderate JS/css) | 10.12s|
 
 ## How to run the tests
 
